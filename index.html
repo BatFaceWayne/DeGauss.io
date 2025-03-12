@@ -135,7 +135,7 @@
                     <div class="hero-body" style="padding-top: 2rem;">
                       <img id="teaser" src="./static/images/teaser.jpg" alt="Teaser Image" style="max-width: 2500px; width: 100%; height: auto; margin: 0 auto 1.5rem; display: block;">
                       <h2 class="subtitle has-text-centered">
-                         With Self-supervised Dynamic-static decomposition, <strong>DeGauss</strong> models distractor-free static scene from occluded input (a) and yield high-quality&Efficient dynamic scene representation(b).
+                         With Self-supervised Dynamic-static decomposition, <strong>DeGauss</strong> models distractor-free static scene from occluded input (a) and yields high-quality&Efficient dynamic scene representation(b).
                       </h2>
                     </div>
                   </div>
@@ -143,33 +143,98 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Three-Way Video Comparison</h2>
+    <h2 class="title is-3">Video Comparison</h2>
+    <!-- First Row -->
     <div class="columns">
-      <!-- Left Column - Single Video -->
-      <div class="column is-3">
+      <!-- First Column -->
+      <div class="column is-4">
         <div class="video-container">
-          <video id="shiba-compare" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/new_videos/cut_1adt_3dgs.mov" type="video/mp4">
+          <video id="video1" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/Egocentric_data/a1_adt_3dgs.mov" type="video/mp4">
           </video>
           <div class="video-label" style="padding-left: 1rem;">3DGS</div>
         </div>
       </div>
 
-      <!-- Right Column - Video Comparison -->
-      <div class="column is-3">
-        <div class="video-comparison-container">
-          <div class="video-wrapper">
-            <video id="blueshirt-compare" poster="" autoplay controls muted loop playsinline>
-              <source src="./static/new_videos/cut_2adt_spotlesssplats.mov" type="video/mp4">
-            </video>
-            <video id="fullbody-compare" poster="" autoplay controls muted loop playsinline>
-              <source src="./static/new_videos/cut_3adt_ours.mov" type="video/mp4">
-            </video>
-            <div class="divider-line" id="divider-line"></div>
-            <div class="video-label right-label">Ours</div>
-            <div class="video-label left-label">SpotlessSplats</div>
-          </div>
-          <input type="range" min="0" max="100" value="50" class="slider" id="video-slider">
+      <!-- Second Column -->
+      <div class="column is-4">
+        <div class="video-container">
+          <video id="video2" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/Egocentric_data/a2_adt_spotlesssplats.mov" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
+        </div>
+      </div>
+
+      <!-- Third Column -->
+      <div class="column is-4">
+        <div class="video-container">
+          <video id="video3" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/Egocentric_data/a3_adt_ours.mov" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">Ours</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="columns">
+      <!-- First Column -->
+      <div class="column is-4">
+        <div class="video-container">
+          <video id="video4" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/Egocentric_data/b1_aea_3dgs.mov" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">3DGS</div>
+        </div>
+      </div>
+
+      <!-- Second Column -->
+      <div class="column is-4">
+        <div class="video-container">
+          <video id="video5" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/Egocentric_data/b2_aea_spotlesssplats.mov" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
+        </div>
+      </div>
+
+      <!-- Third Column -->
+      <div class="column is-4">
+        <div class="video-container">
+          <video id="video6" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/Egocentric_data/b3_aea_ours.mov" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">Ours</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Row -->
+    <div class="columns is-centered">
+      <!-- New Video Column -->
+      <div class="column is-10">
+        <div class="video-container-wide">
+          <video id="video7" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/Egocentric_data/c1_hot3d_neuraldiff.mov" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">NeuralDiff</div>
+        </div>
+        <div class="has-text-centered" style="margin-top: 0;">
+          <p class="is-size-6">(left to right, GT, Full Render, Foreground Render, Background Render)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fourth Row -->
+    <div class="columns is-centered">
+      <!-- New Video Column -->
+      <div class="column is-10">
+        <div class="video-container-extra-wide">
+          <video id="video8" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/Egocentric_data/c2_hot3d_ours.mov" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">Ours 8</div>
         </div>
       </div>
     </div>
@@ -414,30 +479,41 @@
 </footer>
 
 <style>
-  .video-container,
-  .video-comparison-container {
+  .video-container {
     position: relative;
     width: 100%;
-    padding-top: 200%; /* Changed to 1:2 aspect ratio (twice as tall as wide) */
+    padding-top: 56.25%; /* Default 16:9 aspect ratio */
     overflow: hidden;
+    margin-bottom: 0.5rem; /* Reduced from default */
   }
 
-  .video-container video,
-  .video-comparison-container video {
+  .columns {
+    margin-bottom: 0.5rem !important; /* Reduced from default */
+  }
+
+  .column {
+    padding: 0.1rem !important; /* Reduced from default */
+  }
+
+  .video-container video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain cover mode */
+    object-fit: cover;
   }
 
-  .video-comparison-container {
-    position: relative;
-  }
-
-  #fullbody-compare {
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  .video-label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    pointer-events: none;
   }
 
   .slider {
@@ -463,77 +539,54 @@
     transform: translateX(-50%);
   }
 
-  .video-label {
-    position: absolute;
-    bottom: 10px;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-    z-index: 3;
-    pointer-events: none;
-  }
-
-  .right-label {
-    right: 10px;
-  }
-
-  .left-label {
-    left: 10px;
-  }
-
   .hero.teaser .hero-body {
     padding-top: 2rem; /* Adjust the value as needed */
+  }
+
+  /* Specific style for Video 7 */
+  .video-container-wide {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 20.0%; /* 8:1 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 0.0rem;
+  }
+
+  .video-container-wide video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Specific style for Video 8 */
+  .video-container-extra-wide {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Slightly wider than Video 7 */
+    margin: 0 auto;
+    padding-top: 20%; /* 8:1 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 0.0rem;
+  }
+
+  .video-container-extra-wide video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 </style>
 
 <script>
-  const slider = document.getElementById('video-slider');
-  const fullbodyVideo = document.getElementById('fullbody-compare');
-  const dividerLine = document.getElementById('divider-line');
-
-  let isDragging = false;
-  const MIN_VALUE = 5;  // 5%
-  const MAX_VALUE = 95; // 95%
-
-  const updateComparison = (value) => {
-    // Constrain the value between MIN_VALUE and MAX_VALUE
-    const constrainedValue = Math.max(MIN_VALUE, Math.min(MAX_VALUE, value));
-    fullbodyVideo.style.clipPath = `polygon(${constrainedValue}% 0, 100% 0, 100% 100%, ${constrainedValue}% 100%)`;
-    dividerLine.style.left = `${constrainedValue}%`;
-  };
-
-  const handleMouseDown = () => {
-    isDragging = true;
-  };
-
-  const handleMouseMove = (e) => {
-    if (isDragging) {
-      const rect = slider.getBoundingClientRect();
-      let percent = ((e.clientX - rect.left) / rect.width) * 100;
-      // Constrain the percent value
-      percent = Math.max(MIN_VALUE, Math.min(MAX_VALUE, percent));
-      slider.value = percent;
-      updateComparison(percent);
-    }
-  };
-
-  const handleMouseUp = () => {
-    isDragging = false;
-  };
-
-  slider.addEventListener('input', () => {
-    const value = parseFloat(slider.value);
-    updateComparison(value);
-  });
-
-  slider.addEventListener('mousedown', handleMouseDown);
-  document.addEventListener('mousemove', handleMouseMove);
-  document.addEventListener('mouseup', handleMouseUp);
-
-  // Initialize with constrained value
-  slider.value = 50; // Default to middle
-  updateComparison(50);
+  // Remove all slider-related JavaScript code
+  // Keep other JavaScript functionality if needed
 </script>
 
 
