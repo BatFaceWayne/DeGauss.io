@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Dynamic-Static Decomposition with Gaussian Splatting for Distractor-free 3D Reconstruction">
-  <meta name="keywords" content="DeGauss, D-NeRF, NeRF">
+  <meta name="keywords" content="DeGauss, Dynamic-Static Decomposition, Gaussian Splatting, Distractor-free 3D Reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DeGauss: Deformable Neural Radiance Fields</title>
+  <title>DeGauss: Dynamic-Static Decomposition with Gaussian Splatting for Distractor-free 3D Reconstruction</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WNNY5SBS1"></script>
@@ -28,7 +28,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.jpg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -62,14 +62,14 @@
           <h1 class="title is-1 publication-title">DeGauss: Dynamic-Static Decomposition with Gaussian Splatting for Distractor-free 3D Reconstruction</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Rui Wang</a>,</span>
+              <a href="https://pdz.ethz.ch/the-group/people/rui-wang.html">Rui Wang</a>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Quentin Lohmeyer</a>,</span>
+              <a href="https://pdz.ethz.ch/the-group/people/lohmeyer.html">Quentin Lohmeyer</a>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Mirko Meboldt</a>,
+              <a href="https://pdz.ethz.ch/the-group/people/meboldt.html">Mirko Meboldt</a>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Siyu Tang</a>,
+              <a href="https://vlg.inf.ethz.ch/team/Prof-Dr-Siyu-Tang.html">Siyu Tang</a>,
             </span>
             
           <div class="is-size-5 publication-authors">
@@ -81,7 +81,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -90,7 +90,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -100,7 +100,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://youtu.be/d8U4--_jIcc?si=yF51cUzK-zuDHjkv"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -110,7 +110,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/BatFaceWayne/DeGauss.git"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -118,15 +118,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
 
           
     
@@ -141,265 +132,290 @@
                   </div>
                 </section>
 
+
+
+                <section class="section">
+                  <div class="container is-max-desktop">
+                    <!-- Abstract. -->
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-four-fifths">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                          <p>
+                            Reconstructing clean, distractor-free 3D scenes from real-world captures remains a significant challenge, particularly in highly dynamic and cluttered settings such as egocentric videos. To tackle this problem, we introduce DeGauss, a simple and robust self-supervised framework for dynamic scene reconstruction based on a decoupled dynamic-static Gaussian Splatting design. DeGauss models dynamic elements with foreground Gaussians and static content with background Gaussians, using a probabilistic mask to coordinate their composition and enable independent yet complementary optimization. DeGauss generalizes robustly across a wide range of real-world scenarios, from casual image collections to long, dynamic egocentric videos, without relying on complex heuristics or extensive supervision. Experiments on benchmarks including NeRF-on-the-go, ADT, AEA, Hot3D, and EPIC-Fields demonstrate that DeGauss consistently outperforms existing methods, establishing a strong baseline for generalizable, distractor-free 3D reconstructionin highly dynamic, interaction-rich environments
+                          </p>
+            
+                            
+                        </div>
+                      </div>
+                    </div>
+                    <!--/ Abstract. -->
+                
+                    <!-- Paper video. -->
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-four-fifths">
+                        <h2 class="title is-3">Video</h2>
+                        <div class="publication-video">
+                          <iframe src="https://www.youtube.com/embed/d8U4--_jIcc?si=6PfcoF71YtgJ4BEK?rel=0&amp;showinfo=0"
+                                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <!--/ Paper video. -->
+                  </div>
+                </section>
+                
+<!-- Method Image Section -->
+<div class="columns is-centered">
+  <div class="column">
+    <h2 class="title is-3">Pipeline</h2>
+    <figure class="image">
+      <img src="./static/images/method.png" alt="Method Overview">
+      <figcaption class="has-text-centered is-italic">
+        Our method simultaneously reconstructs the 3D scene and learns an unsupervised decomposition into decoupled static background
+        and dynamic foreground branches, where the update is loosely controlled by the mask rasterization process.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+       
+
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Video Comparison</h2>
-    <!-- First Row -->
-    <div class="columns">
-      <!-- First Column -->
-      <div class="column is-4">
-        <div class="video-container">
-          <video id="video1" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/Egocentric_data/a1_adt_3dgs.mov" type="video/mp4">
+    <h3 class="title is-3">Distractor-free Scene Reconstruction</h3>
+    <div class="content has-text-centered">
+      <p class="is-size-6">We present an on-the-fly rendering comparison of reconstructed scenes using 3D-GS, SpotlessSplats, and our approach on the Nerf on-the-go and Aria Everyday Activities datasets. Our method achieves high quality rendering quality with smooth depth geometry.</p>
+    </div>
+    
+
+    <!-- Seventh Row - Mountain Videos -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h3 class="title is-5">Nerf on-the-go Dataset</h3>
+      </div>
+    </div>
+
+    <!-- Eighth Row -->
+    <div class="columns is-centered">
+      <!-- Video 11 -->
+      <div class="column">
+        <div class="video-container-wide-3">
+          <video id="video11" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/nerf_on_the_go_traj/a1_mountain_3dgs.mp4" type="video/mp4">
           </video>
           <div class="video-label" style="padding-left: 1rem;">3DGS</div>
         </div>
       </div>
 
-      <!-- Second Column -->
-      <div class="column is-4">
-        <div class="video-container">
-          <video id="video2" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/Egocentric_data/a2_adt_spotlesssplats.mov" type="video/mp4">
+      <!-- Video 12 -->
+      <div class="column">
+        <div class="video-container-wide-3">
+          <video id="video12" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/nerf_on_the_go_traj/a2_mountain_spotlesssplats.mp4" type="video/mp4">
           </video>
           <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
         </div>
       </div>
 
-      <!-- Third Column -->
-      <div class="column is-4">
-        <div class="video-container">
-          <video id="video3" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/Egocentric_data/a3_adt_ours.mov" type="video/mp4">
+      <!-- Video 13 -->
+      <div class="column">
+        <div class="video-container-wide-3">
+          <video id="video13" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/nerf_on_the_go_traj/a3_mountain_ours.mp4" type="video/mp4">
           </video>
           <div class="video-label" style="padding-left: 1rem;">Ours</div>
         </div>
       </div>
     </div>
 
+    <!-- Ninth Row - Corner Videos -->
+
+
+    <!-- Tenth Row -->
+    <div class="columns is-centered">
+      <!-- Video 14 -->
+      <div class="column">
+        <div class="video-container-wide-3">
+          <video id="video14" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/nerf_on_the_go_traj/b1_corner_3dgs.mp4" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">3DGS</div>
+        </div>
+      </div>
+
+      <!-- Video 15 -->
+      <div class="column">
+        <div class="video-container-wide-3">
+          <video id="video15" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/nerf_on_the_go_traj/b2_corner_spotlesssplats.mp4" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
+        </div>
+      </div>
+
+      <!-- Video 16 -->
+      <div class="column">
+        <div class="video-container-wide-3">
+          <video id="video16" poster="" autoplay controls muted loop playsinline>
+            <source src="./static/supple/nerf_on_the_go_traj/b3_corner_ours.mp4" type="video/mp4">
+          </video>
+          <div class="video-label" style="padding-left: 1rem;">Ours</div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Tenth Row -->
+<div class="columns is-centered">
+  <!-- Video 14 -->
+  <div class="column">
+    <div class="video-container-wide-3">
+      <video id="video14" poster="" autoplay controls muted loop playsinline>
+        <source src="./static/supple/nerf_on_the_go_traj/c1_spot_3dgs.mp4" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">3DGS</div>
+    </div>
+  </div>
+
+  <!-- Video 15 -->
+  <div class="column">
+    <div class="video-container-wide-3">
+      <video id="video15" poster="" autoplay controls muted loop playsinline>
+        <source src="./static/supple/nerf_on_the_go_traj/c2_spot_spotlesssplats.mp4" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
+    </div>
+  </div>
+
+  <!-- Video 16 -->
+  <div class="column">
+    <div class="video-container-wide-3">
+      <video id="video16" poster="" autoplay controls muted loop playsinline>
+        <source src="./static/supple/nerf_on_the_go_traj/c3_spot_ours.mp4" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">Ours</div>
+    </div>
+  </div>
+</div>
+
+<div class="columns is-centered">
+  <div class="column">
+    <h3 class="title is-5">Aria Everyday Activities Dataset</h3>
+  </div>
+</div>
+
     <!-- Second Row -->
-    <div class="columns">
-      <!-- First Column -->
+    <div class="columns is-centered">
+      <!-- Empty column for offset -->
+      <div class="column"></div>
+
+      <!-- Video 4 -->
       <div class="column is-4">
         <div class="video-container">
           <video id="video4" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/Egocentric_data/b1_aea_3dgs.mov" type="video/mp4">
+            <source src="./static/new_videos/cut_1Aea_3dgs.mov" type="video/mp4">
           </video>
           <div class="video-label" style="padding-left: 1rem;">3DGS</div>
         </div>
       </div>
 
-      <!-- Second Column -->
+      <!-- Video 5 -->
       <div class="column is-4">
         <div class="video-container">
           <video id="video5" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/Egocentric_data/b2_aea_spotlesssplats.mov" type="video/mp4">
+            <source src="./static/new_videos/cut_2Aea_spotlesssplats.mov" type="video/mp4">
           </video>
           <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
         </div>
       </div>
 
-      <!-- Third Column -->
+      <!-- Video 6 -->
       <div class="column is-4">
         <div class="video-container">
           <video id="video6" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/Egocentric_data/b3_aea_ours.mov" type="video/mp4">
+            <source src="./static/new_videos/cut_3Aea_ours.mov" type="video/mp4">
           </video>
           <div class="video-label" style="padding-left: 1rem;">Ours</div>
         </div>
       </div>
+
+      <!-- Empty column for offset -->
+      <div class="column"></div>
     </div>
 
-    <!-- Third Row -->
-    <div class="columns is-centered">
-      <!-- New Video Column -->
-      <div class="column is-10">
-        <div class="video-container-wide">
-          <video id="video7" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/Egocentric_data/c1_hot3d_neuraldiff.mov" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">NeuralDiff</div>
-        </div>
-        <div class="has-text-centered" style="margin-top: 0;">
-          <p class="is-size-6">(left to right, GT, Full Render, Foreground Render, Background Render)</p>
-        </div>
-      </div>
-    </div>
+  
 
-    <!-- Fourth Row -->
-    <div class="columns is-centered">
-      <!-- New Video Column -->
-      <div class="column is-10">
-        <div class="video-container-extra-wide">
-          <video id="video8" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/Egocentric_data/c2_hot3d_ours.mov" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">Ours 8</div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
-        </div>
-      </div>
+<!-- Fifth Row -->
+<div class="columns is-centered">
+  <div class="column">
+    <h3 class="title is-3">Results on Epic-Field Dataset</h3>
+    <div class="content has-text-centered">
+      <p class="is-size-6">Unlike NeuralDiff, where the dynamic foreground tends to dominate the reconstruction, our method leverages a decoupled two-branch design to achieve a flexible and accurate dynamic-static decomposition, yielding a static reconstruction rich in fine details. (left to right: Input, Composed Render, Foreground Render, Background Render, -/Compoistion mask)</p>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
+    <div class="video-container-wide-2">
+      <video id="video9" poster="" autoplay controls muted loop playsinline>
+        <source src="./static/supple/Egocentric_data/d1_EPIC-Field_neuraldiff.mov" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">NeuralDiff</div>
     </div>
-    <!--/ Paper video. -->
   </div>
-</section>
+</div>
 
+<!-- Sixth Row -->
+<div class="columns is-centered">
+  <!-- New Video Column -->
+  <div class="column">
 
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
+    <div class="video-container-extra-wide-2">
+      <video id="video10" poster="" autoplay controls muted loop playsinline>
+        <source src="./static/supple/Egocentric_data/output_videourskitchen2.mov" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">Ours</div>
     </div>
-    <!--/ Matting. -->
+  </div>
+</div>
 
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="2" min="1" max="163" value="1" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
+<!-- New Video Section -->
+<div class="columns is-centered">
+  <div class="column">
+    <h3 class="title is-3">Dynamic Scene Modeling</h3>
+    <div class="content has-text-centered">
+      <p class="is-size-6">Our method can also be used for high-quality and efficient dynamic scene representation with the decoupled foreground-background branches. We show the results on the Neu3D dataset and HyperNerf dataset. (left to right: -/Input, Composed Render, Foreground Render, -/Background Render, Compoistion mask)</p>
     </div>
-    <!--/ Animation. -->
+    <div class="video-container-coffee-martini">
+      <video id="video23" poster="" autoplay controls muted loop playsinline>
+        <source src="./static/supple/Neu3D/a4_Coffee_martini_GT_and_our_composition.mp4" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">Coffee Martini</div>
+    </div>
+  </div>
+</div>
+
+<!-- New Video Section - Sear Steak -->
+<div class="columns is-centered">
+  <div class="column">
+    <div class="video-container-sear-steak">
+      <video id="video24" poster="" autoplay controls muted loop playsinline>
+        <source src="./static/supple/Neu3D/b3_SearSteak_ours_composition_traj.mp4" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">Sear Steak(free view render)</div>
+    </div>
+  </div>
+</div>
+
+<!-- New Video Section - Chicken -->
+<div class="columns is-centered">
+  <div class="column">
+    <div class="video-container-chicken">
+      <video id="video25" poster="" autoplay controls muted loop playsinline>
+        <source src="./static/supple/chicken.mp4" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">Chicken</div>
+    </div>
+  </div>
+</div>
 
 
     <!-- Concurrent Work. -->
@@ -436,12 +452,9 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>
+      
+    </code></pre>
   </div>
 </section>
 
@@ -450,7 +463,7 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
@@ -460,17 +473,11 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
+
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Template cr. to  <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> 
+
           </p>
         </div>
       </div>
@@ -482,7 +489,7 @@
   .video-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* Default 16:9 aspect ratio */
+    padding-top: 200%; /* Default 16:9 aspect ratio */
     overflow: hidden;
     margin-bottom: 0.5rem; /* Reduced from default */
   }
@@ -547,9 +554,8 @@
   .video-container-wide {
     position: relative;
     width: 100%;
-    max-width: 600px;
     margin: 0 auto;
-    padding-top: 20.0%; /* 8:1 aspect ratio */
+    padding-top: 25.0%; /* 8:1 aspect ratio */
     overflow: hidden;
     margin-bottom: 0.0rem;
   }
@@ -582,11 +588,127 @@
     height: 100%;
     object-fit: contain;
   }
+
+  /* Specific style for Video 9 */
+  .video-container-wide-2 {
+    position: relative;
+    width: 100%;
+ /* Slightly wider than Video 7 */
+    margin: 0 auto;
+    padding-top: 15%; /* Changed from 20% to 20% for 5:1 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 0.0rem;
+  }
+
+  .video-container-wide-2 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Specific style for Video 10 */
+  .video-container-extra-wide-2 {
+    position: relative;
+    width: 100%; /* Wider than Video 8 */
+    margin: 0 auto;
+    padding-top: 12%; /* 8:1 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 3rem; /* Added bottom padding */
+  }
+
+  .video-container-extra-wide-2 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Specific style for 6-column video comparison */
+  .video-container-wide-3 {
+    position: relative;
+    width: 100%;
+    padding-top: 150%; /* Changed to 200% for 1:2 aspect ratio (vertical video) */
+    overflow: hidden;
+    margin-bottom: 1rem; /* Added bottom padding */
+  }
+
+  .video-container-wide-3 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Specific style for Coffee Martini video */
+  .video-container-coffee-martini {
+    position: relative;
+    width: 100%;
+    padding-top: 20%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-container-coffee-martini video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Specific style for Sear Steak video */
+  .video-container-sear-steak {
+    position: relative;
+    width: 100%;
+    padding-top: 25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-container-sear-steak video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Specific style for Chicken video */
+  .video-container-chicken {
+    position: relative;
+    width: 100%;
+    padding-top: 36%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-container-chicken video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .has-text-centered {
+    margin-top: 0.25rem !important; /* Reduced from default */
+  }
 </style>
 
 <script>
   // Remove all slider-related JavaScript code
   // Keep other JavaScript functionality if needed
 </script>
+
 
 
