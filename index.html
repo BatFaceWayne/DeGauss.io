@@ -134,36 +134,36 @@
 
 
 
-                <section class="section">
-                  <div class="container is-max-desktop">
-                    <!-- Abstract. -->
-                    <div class="columns is-centered has-text-centered">
-                      <div class="column is-four-fifths">
-                        <h2 class="title is-3">Abstract</h2>
-                        <div class="content has-text-justified">
-                          <p>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
                             Reconstructing clean, distractor-free 3D scenes from real-world captures remains a significant challenge, particularly in highly dynamic and cluttered settings such as egocentric videos. To tackle this problem, we introduce DeGauss, a simple and robust self-supervised framework for dynamic scene reconstruction based on a decoupled dynamic-static Gaussian Splatting design. DeGauss models dynamic elements with foreground Gaussians and static content with background Gaussians, using a probabilistic mask to coordinate their composition and enable independent yet complementary optimization. DeGauss generalizes robustly across a wide range of real-world scenarios, from casual image collections to long, dynamic egocentric videos, without relying on complex heuristics or extensive supervision. Experiments on benchmarks including NeRF-on-the-go, ADT, AEA, Hot3D, and EPIC-Fields demonstrate that DeGauss consistently outperforms existing methods, establishing a strong baseline for generalizable, distractor-free 3D reconstructionin highly dynamic, interaction-rich environments
                           </p>
             
                             
-                        </div>
-                      </div>
-                    </div>
-                    <!--/ Abstract. -->
-                
-                    <!-- Paper video. -->
-                    <div class="columns is-centered has-text-centered">
-                      <div class="column is-four-fifths">
-                        <h2 class="title is-3">Video</h2>
-                        <div class="publication-video">
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
                           <iframe src="https://www.youtube.com/embed/d8U4--_jIcc?si=6PfcoF71YtgJ4BEK?rel=0&amp;showinfo=0"
-                                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </div>
-                      </div>
-                    </div>
-                    <!--/ Paper video. -->
-                  </div>
-                </section>
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
                 
 <!-- Method Image Section -->
 <div class="columns is-centered">
@@ -178,7 +178,7 @@
     </figure>
   </div>
 </div>
-       
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -186,171 +186,283 @@
     <div class="content has-text-centered">
       <p class="is-size-6">We present an on-the-fly rendering comparison of reconstructed scenes using 3D-GS, SpotlessSplats, and our approach on the Nerf on-the-go and Aria Everyday Activities datasets. Our method achieves high quality rendering quality with smooth depth geometry.</p>
     </div>
-    
 
-    <!-- Seventh Row - Mountain Videos -->
+    <!-- New Slider Comparison Row -->
     <div class="columns is-centered">
       <div class="column">
-        <h3 class="title is-5">Nerf on-the-go Dataset</h3>
+        <h3 class="title is-5">Nerf on-the-go Dataset<sup class="footnote-ref">1</sup></h3>
+        <div class="content has-text-centered">
+          <p class="is-size-6">Drag the slider to compare different reconstruction methods</p>
+        </div>
       </div>
     </div>
 
-    <!-- Eighth Row -->
     <div class="columns is-centered">
-      <!-- Video 11 -->
-      <div class="column">
-        <div class="video-container-wide-3">
-          <video id="video11" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/nerf_on_the_go_traj/a1_mountain_3dgs.mp4" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">3DGS</div>
+      <!-- 3DGS vs Ours Comparison (Mountain) -->
+      <div class="column is-3">
+        <div class="overlay-video-container">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-1" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/a3_mountain_ours.mp4" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-1">
+            <video id="video-top-1" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/a1_mountain_3dgs.mp4" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">3DGS</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-1">
+          <div class="slider-divider" id="slider-divider-1"></div>
         </div>
       </div>
 
-      <!-- Video 12 -->
-      <div class="column">
-        <div class="video-container-wide-3">
-          <video id="video12" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/nerf_on_the_go_traj/a2_mountain_spotlesssplats.mp4" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
+      <!-- SpotlessSplats vs Ours Comparison (Mountain) -->
+      <div class="column is-3">
+        <div class="overlay-video-container">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-2" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/a3_mountain_ours.mp4" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-2">
+            <video id="video-top-2" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/a2_mountain_spotlesssplats.mp4" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">SpotlessSplats</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-2">
+          <div class="slider-divider" id="slider-divider-2"></div>
+        </div>
+      </div>
+      
+      <!-- 3DGS vs Ours Comparison (Corner) -->
+      <div class="column is-3">
+        <div class="overlay-video-container">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-3" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/b3_corner_ours.mp4" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-3">
+            <video id="video-top-3" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/b1_corner_3dgs.mp4" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">3DGS</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-3">
+          <div class="slider-divider" id="slider-divider-3"></div>
         </div>
       </div>
 
-      <!-- Video 13 -->
-      <div class="column">
-        <div class="video-container-wide-3">
-          <video id="video13" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/nerf_on_the_go_traj/a3_mountain_ours.mp4" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">Ours</div>
+      <!-- SpotlessSplats vs Ours Comparison (Corner) -->
+      <div class="column is-3">
+        <div class="overlay-video-container">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-4" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/b3_corner_ours.mp4" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-4">
+            <video id="video-top-4" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/b2_corner_spotlesssplats.mp4" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">SpotlessSplats</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-4">
+          <div class="slider-divider" id="slider-divider-4"></div>
         </div>
       </div>
     </div>
 
-    <!-- Ninth Row - Corner Videos -->
-
-
-    <!-- Tenth Row -->
+    <!-- Additional Comparison Row for Spot and Patio High -->
     <div class="columns is-centered">
-      <!-- Video 14 -->
-      <div class="column">
-        <div class="video-container-wide-3">
-          <video id="video14" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/nerf_on_the_go_traj/b1_corner_3dgs.mp4" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">3DGS</div>
+      <!-- 3DGS vs Ours Comparison (Spot) -->
+      <div class="column is-3">
+        <div class="overlay-video-container">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-5" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/c3_spot_ours.mp4" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-5">
+            <video id="video-top-5" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/cc2.mp4" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">3DGS</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-5">
+          <div class="slider-divider" id="slider-divider-5"></div>
         </div>
       </div>
 
-      <!-- Video 15 -->
-      <div class="column">
-        <div class="video-container-wide-3">
-          <video id="video15" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/nerf_on_the_go_traj/b2_corner_spotlesssplats.mp4" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
+      <!-- SpotlessSplats vs Ours Comparison (Spot) -->
+      <div class="column is-3">
+        <div class="overlay-video-container">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-6" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/c3_spot_ours.mp4" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-6">
+            <video id="video-top-6" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/c2_spot_spotlesssplats.mp4" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">SpotlessSplats</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-6">
+          <div class="slider-divider" id="slider-divider-6"></div>
+        </div>
+      </div>
+      
+      <!-- 3DGS vs Ours Comparison (Patio High) -->
+      <div class="column is-3">
+        <div class="overlay-video-container">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-7" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/d3_patio_high_ours.mp4" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-7">
+            <video id="video-top-7" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/d1_patio_high_3dgs.mp4" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">3DGS</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-7">
+          <div class="slider-divider" id="slider-divider-7"></div>
         </div>
       </div>
 
-      <!-- Video 16 -->
-      <div class="column">
-        <div class="video-container-wide-3">
-          <video id="video16" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/supple/nerf_on_the_go_traj/b3_corner_ours.mp4" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">Ours</div>
+      <!-- SpotlessSplats vs Ours Comparison (Patio High) -->
+      <div class="column is-3">
+        <div class="overlay-video-container">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-8" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/d3_patio_high_ours.mp4" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-8">
+            <video id="video-top-8" autoplay muted loop playsinline>
+              <source src="./static/supple/nerf_on_the_go_traj/d2_patio_high_spotlesssplats.mp4" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">SpotlessSplats</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-8">
+          <div class="slider-divider" id="slider-divider-8"></div>
         </div>
       </div>
     </div>
 
-
-<!-- Tenth Row -->
-<div class="columns is-centered">
-  <!-- Video 14 -->
-  <div class="column">
-    <div class="video-container-wide-3">
-      <video id="video14" poster="" autoplay controls muted loop playsinline>
-        <source src="./static/supple/nerf_on_the_go_traj/c1_spot_3dgs.mp4" type="video/mp4">
-      </video>
-      <div class="video-label" style="padding-left: 1rem;">3DGS</div>
-    </div>
-  </div>
-
-  <!-- Video 15 -->
-  <div class="column">
-    <div class="video-container-wide-3">
-      <video id="video15" poster="" autoplay controls muted loop playsinline>
-        <source src="./static/supple/nerf_on_the_go_traj/c2_spot_spotlesssplats.mp4" type="video/mp4">
-      </video>
-      <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
-    </div>
-  </div>
-
-  <!-- Video 16 -->
-  <div class="column">
-    <div class="video-container-wide-3">
-      <video id="video16" poster="" autoplay controls muted loop playsinline>
-        <source src="./static/supple/nerf_on_the_go_traj/c3_spot_ours.mp4" type="video/mp4">
-      </video>
-      <div class="video-label" style="padding-left: 1rem;">Ours</div>
-    </div>
-  </div>
-</div>
-
-<div class="columns is-centered">
-  <div class="column">
-    <h3 class="title is-5">Aria Everyday Activities Dataset</h3>
-  </div>
-</div>
-
-    <!-- Second Row -->
+    <!-- Aria Video Comparisons with Sliders -->
     <div class="columns is-centered">
-      <!-- Empty column for offset -->
-      <div class="column"></div>
-
-      <!-- Video 4 -->
-      <div class="column is-4">
-        <div class="video-container">
-          <video id="video4" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/new_videos/cut_1Aea_3dgs.mov" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">3DGS</div>
+      <div class="column">
+        <h3 class="title is-5">Aria Datasets<sup class="footnote-ref">2</sup><sup class="footnote-ref">3</sup></h3>
+        <div class="content has-text-centered">
+          <p class="is-size-6">Drag the slider to compare different reconstruction methods on Aria datasets</p>
         </div>
       </div>
-
-      <!-- Video 5 -->
-      <div class="column is-4">
-        <div class="video-container">
-          <video id="video5" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/new_videos/cut_2Aea_spotlesssplats.mov" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">SpotlessSplats</div>
-        </div>
-      </div>
-
-      <!-- Video 6 -->
-      <div class="column is-4">
-        <div class="video-container">
-          <video id="video6" poster="" autoplay controls muted loop playsinline>
-            <source src="./static/new_videos/cut_3Aea_ours.mov" type="video/mp4">
-          </video>
-          <div class="video-label" style="padding-left: 1rem;">Ours</div>
-        </div>
-      </div>
-
-      <!-- Empty column for offset -->
-      <div class="column"></div>
     </div>
 
-  
+    <div class="columns is-centered">
+      <!-- 3DGS vs Ours Comparison (AEA) -->
+      <div class="column is-3">
+        <div class="overlay-video-container" style="padding-top: 200%;">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-9" autoplay muted loop playsinline>
+              <source src="./static/new_videos/cut_3Aea_ours.mov" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-9">
+            <video id="video-top-9" autoplay muted loop playsinline>
+              <source src="./static/new_videos/cut_1Aea_3dgs.mov" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">3DGS</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-9">
+          <div class="slider-divider" id="slider-divider-9"></div>
+        </div>
+      </div>
+
+      <!-- SpotlessSplats vs Ours Comparison (AEA) -->
+      <div class="column is-3">
+        <div class="overlay-video-container" style="padding-top: 200%;">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-10" autoplay muted loop playsinline>
+              <source src="./static/new_videos/cut_3Aea_ours.mov" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-10">
+            <video id="video-top-10" autoplay muted loop playsinline>
+              <source src="./static/new_videos/cut_2Aea_spotlesssplats.mov" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">SpotlessSplats</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-10">
+          <div class="slider-divider" id="slider-divider-10"></div>
+        </div>
+      </div>
+      
+      <!-- 3DGS vs Ours Comparison (ADT) -->
+      <div class="column is-3">
+        <div class="overlay-video-container" style="padding-top: 200%;">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-11" autoplay muted loop playsinline>
+              <source src="./static/new_videos/cut_3adt_ours.mov" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-11">
+            <video id="video-top-11" autoplay muted loop playsinline>
+              <source src="./static/new_videos/cut_1adt_3dgs.mov" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">3DGS</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-11">
+          <div class="slider-divider" id="slider-divider-11"></div>
+        </div>
+      </div>
+
+      <!-- SpotlessSplats vs Ours Comparison (ADT) -->
+      <div class="column is-3">
+        <div class="overlay-video-container" style="padding-top: 200%;">
+          <div class="video-wrapper bottom">
+            <video id="video-bottom-12" autoplay muted loop playsinline>
+              <source src="./static/new_videos/cut_3adt_ours.mov" type="video/mp4">
+            </video>
+            <div class="video-label bottom-label" style="padding-right: 1rem; right: 10px;">Ours</div>
+          </div>
+          <div class="video-wrapper top" id="top-video-12">
+            <video id="video-top-12" autoplay muted loop playsinline>
+              <source src="./static/new_videos/cut_2adt_spotlesssplats.mov" type="video/mp4">
+            </video>
+            <div class="video-label top-label" style="padding-left: 1rem; left: 10px;">SpotlessSplats</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="overlay-slider" id="overlay-slider-12">
+          <div class="slider-divider" id="slider-divider-12"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footnotes Section -->
+
 
 </section>
 
 <!-- Fifth Row -->
 <div class="columns is-centered">
   <div class="column">
-    <h3 class="title is-3">Results on Epic-Field Dataset</h3>
+    <h3 class="title is-3">Results on Epic-Field Dataset<sup class="footnote-ref">4</sup></h3>
     <div class="content has-text-centered">
       <p class="is-size-6">Unlike NeuralDiff, where the dynamic foreground tends to dominate the reconstruction, our method leverages a decoupled two-branch design to achieve a flexible and accurate dynamic-static decomposition, yielding a static reconstruction rich in fine details. (left to right: Input, Composed Render, Foreground Render, Background Render, -/Compoistion mask)</p>
     </div>
@@ -382,7 +494,7 @@
   <div class="column">
     <h3 class="title is-3">Dynamic Scene Modeling</h3>
     <div class="content has-text-centered">
-      <p class="is-size-6">Our method can also be used for high-quality and efficient dynamic scene representation with the decoupled foreground-background branches. We show the results on the Neu3D dataset and HyperNerf dataset. (left to right: -/Input, Composed Render, Foreground Render, -/Background Render, Compoistion mask)</p>
+      <p class="is-size-6">Our method can also be used for high-quality and efficient dynamic scene representation with the decoupled foreground-background branches. We show the results on the Neu3D dataset<sup class="footnote-ref">5</sup> and HyperNerf dataset<sup class="footnote-ref">6</sup>. (left to right: -/Input, Composed Render, Foreground Render, -/Background Render, Compoistion mask)</p>
     </div>
     <div class="video-container-coffee-martini">
       <video id="video23" poster="" autoplay controls muted loop playsinline>
@@ -464,6 +576,31 @@
   </div>
 </section>
 
+<div class="columns is-centered mt-4">
+  <div class="column is-full">
+    <div class="content footnotes">
+      <hr>
+
+      <ol>
+        <h2 class="title is-6">Datasets</h2>
+        <li id="fn1"><p><a href="https://arxiv.org/pdf/2405.18715">NeRF On-the-go: Exploiting Uncertainty for Distractor-free NeRFs in the Wild
+        </a> </p></li>
+        <li id="fn2"><p><a href="https://arxiv.org/pdf/2402.13349">Aria Everyday Activities Dataset
+        </a> </p></li>
+        <li id="fn3"><p><a href="https://arxiv.org/pdf/2306.06362">Aria Digital Twin: A New Benchmark Dataset for Egocentric 3D Machine Perception
+
+        <li id="fn4"><p><a href="https://arxiv.org/pdf/2306.08731">EPIC Fields: Marrying 3D Geometry and Video Understanding
+
+        </a> </p></li>
+        <li id="fn5"><p><a href="https://arxiv.org/pdf/2103.02597">Neural 3D Video Synthesis from Multi-view Video
+        </a> </p></li>
+        <li id="fn6"><p><a href="https://arxiv.org/pdf/2106.13228">HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields
+
+        </a> </p></li>
+      </ol>
+    </div>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">
@@ -543,11 +680,12 @@
   .divider-line {
     position: absolute;
     top: 0;
+    left: 50%;
     width: 4px;
     height: 100%;
-    background: white;
+    background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
     transform: translateX(-50%);
   }
@@ -709,11 +847,283 @@
   .has-text-centered {
     margin-top: 0.25rem !important; /* Reduced from default */
   }
+
+  /* Video comparison slider styles */
+  .video-compare-container {
+    position: relative;
+    width: 100%;
+    padding-top: 150%; /* Same aspect ratio as other videos */
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .video-wrapper.right {
+    width: 50%;
+    z-index: 1;
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+    margin: 0;
+    z-index: 3;
+    cursor: ew-resize;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: ew-resize;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: ew-resize;
+    border: none;
+  }
+
+  .divider-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 2;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+
+  /* Overlay video comparison styles */
+  .overlay-video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 150%; /* Same aspect ratio as other videos */
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .overlay-video-container .video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .overlay-video-container .video-wrapper.top {
+    z-index: 1;
+    clip-path: inset(0 50% 0 0);
+  }
+
+  .overlay-video-container .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .overlay-video-container .top-label {
+    left: 10px;
+    right: auto;
+  }
+
+  .overlay-video-container .bottom-label {
+    left: auto;
+    right: 10px;
+    padding-right: 1rem;
+  }
+
+  .overlay-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+    margin: 0;
+    z-index: 3;
+    cursor: ew-resize;
+  }
+
+  .overlay-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 100%;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    cursor: ew-resize;
+  }
+
+  .overlay-slider::-moz-range-thumb {
+    width: 5px;
+    height: 100%;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    cursor: ew-resize;
+  }
+
+  /* Additional visible divider line for overlay sliders */
+  .slider-divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 8px;
+    height: 100%;
+    background-color: white;
+    border: 3px solid black;
+    z-index: 2;
+    pointer-events: none;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(0,0,0,0.9);
+  }
+
+  /* Footnote styles */
+  .footnote-ref {
+    font-size: 0.7em;
+    vertical-align: super;
+    color: #3273dc;
+    text-decoration: none;
+    margin-left: 2px;
+  }
+
+  .footnotes {
+    font-size: 0.9em;
+    color: #4a4a4a;
+    border-top: 1px solid #dbdbdb;
+    padding-top: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .footnotes ol {
+    padding-left: 1.5rem;
+  }
+  
+  .footnotes li {
+    margin-bottom: 0.5rem;
+  }
+
+  .mt-4 {
+    margin-top: 2rem !important;
+  }
 </style>
 
 <script>
-  // Remove all slider-related JavaScript code
-  // Keep other JavaScript functionality if needed
+  // Initialize all sliders when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to set up a slider
+    function setupSlider(sliderId, topVideoId, sliderDividerId) {
+      const slider = document.getElementById(sliderId);
+      const topVideo = document.getElementById(topVideoId);
+      const sliderDivider = document.getElementById(sliderDividerId);
+      
+      if (slider && topVideo) {
+        slider.addEventListener('input', function() {
+          const value = this.value;
+          topVideo.style.clipPath = `inset(0 ${100-value}% 0 0)`;
+          if (sliderDivider) {
+            sliderDivider.style.left = value + '%';
+          }
+        });
+      }
+    }
+    
+    // Set up all four sliders
+    setupSlider('overlay-slider-1', 'top-video-1', 'slider-divider-1');
+    setupSlider('overlay-slider-2', 'top-video-2', 'slider-divider-2');
+    setupSlider('overlay-slider-3', 'top-video-3', 'slider-divider-3');
+    setupSlider('overlay-slider-4', 'top-video-4', 'slider-divider-4');
+    
+    // Set up additional sliders for the second row
+    setupSlider('overlay-slider-5', 'top-video-5', 'slider-divider-5');
+    setupSlider('overlay-slider-6', 'top-video-6', 'slider-divider-6');
+    setupSlider('overlay-slider-7', 'top-video-7', 'slider-divider-7');
+    setupSlider('overlay-slider-8', 'top-video-8', 'slider-divider-8');
+    
+    // Set up Aria dataset comparison sliders
+    setupSlider('overlay-slider-9', 'top-video-9', 'slider-divider-9');
+    setupSlider('overlay-slider-10', 'top-video-10', 'slider-divider-10');
+    setupSlider('overlay-slider-11', 'top-video-11', 'slider-divider-11');
+    setupSlider('overlay-slider-12', 'top-video-12', 'slider-divider-12');
+    
+    // Function to sync video playback between pairs
+    function syncVideos(container) {
+      const videos = container.querySelectorAll('video');
+      if (videos.length !== 2) return;
+      
+      const video1 = videos[0];
+      const video2 = videos[1];
+      
+      video1.addEventListener('play', function() {
+        if (video2.paused) {
+          video2.currentTime = video1.currentTime;
+          video2.play();
+        }
+      });
+      
+      video1.addEventListener('pause', function() {
+        if (!video2.paused) {
+          video2.pause();
+        }
+      });
+      
+      video2.addEventListener('play', function() {
+        if (video1.paused) {
+          video1.currentTime = video2.currentTime;
+          video1.play();
+        }
+      });
+      
+      video2.addEventListener('pause', function() {
+        if (!video1.paused) {
+          video1.pause();
+        }
+      });
+    }
+    
+    // Apply sync to all overlay video containers
+    document.querySelectorAll('.overlay-video-container').forEach(syncVideos);
+  });
 </script>
 
 
