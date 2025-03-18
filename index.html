@@ -1143,6 +1143,19 @@
     
     // Apply sync to all overlay video containers
     document.querySelectorAll('.overlay-video-container').forEach(syncVideos);
+
+    // Set playback rate for Aria sequence videos (IDs 9-12)
+    for (let i = 9; i <= 12; i++) {
+      const topVideo = document.getElementById(`video-top-${i}`);
+      const bottomVideo = document.getElementById(`video-bottom-${i}`);
+      
+      if (topVideo) {
+        topVideo.playbackRate = 0.6;
+      }
+      if (bottomVideo) {
+        bottomVideo.playbackRate = 0.6;
+      }
+    }
   });
 </script>
 
