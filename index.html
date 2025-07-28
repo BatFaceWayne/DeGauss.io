@@ -529,6 +529,64 @@
   </div>
 </div>
 
+<!-- Results on Aria Qualitative Dataset -->
+<div class="columns is-centered">
+  <div class="column">
+    <h3 class="title is-3">Qualitative Results of DeGauss on Long Aria sequences <sup class="footnote-ref">2</sup><sup class="footnote-ref">3</sup><sup class="footnote-ref">7</sup></h3>
+    <div class="content has-text-centered">
+      <p class="is-size-6">We showcase qualitative results of our method DeGauss on different sequences of the Aria datasets.</p>
+    </div>
+  </div>
+</div>
+
+<!-- AEA2 Video -->
+<div class="columns is-centered">
+  <div class="column">
+    <div class="video-container-aria">
+      <video id="video-aria-1" autoplay controls muted loop playsinline>
+        <source src="./static/new_videos/aria_quali/aea2.mov" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">AEA</div>
+    </div>
+  </div>
+</div>
+
+<!-- AEA VIS Video -->
+<div class="columns is-centered">
+  <div class="column">
+    <div class="video-container-aria">
+      <video id="video-aria-2" autoplay controls muted loop playsinline>
+        <source src="./static/new_videos/aria_quali/aea_vis.mp4" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">AEA</div>
+    </div>
+  </div>
+</div>
+
+<!-- ADT VIS Video -->
+<div class="columns is-centered">
+  <div class="column">
+    <div class="video-container-aria">
+      <video id="video-aria-3" autoplay controls muted loop playsinline>
+        <source src="./static/new_videos/aria_quali/adt_vis.mp4.mp4" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">ADT</div>
+    </div>
+  </div>
+</div>
+
+<!-- Hot3D VIS Video -->
+<div class="columns is-centered">
+  <div class="column">
+    <div class="video-container-aria">
+      <video id="video-aria-4" autoplay controls muted loop playsinline>
+        <source src="./static/new_videos/aria_quali/hot3d_vis.mp4" type="video/mp4">
+      </video>
+      <div class="video-label" style="padding-left: 1rem;">Hot3D</div>
+    </div>
+  </div>
+</div>
+
 
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
@@ -608,6 +666,9 @@
         <li id="fn6"><p><a href="https://arxiv.org/pdf/2106.13228">HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields
 
         </a> </p></li>
+      <li id="fn7"><p><a href="https://arxiv.org/abs/2406.09598">Introducing HOT3D: An Egocentric Dataset for 3D Hand and Object Tracking
+
+      </a> </p></li>
       </ol>
     </div>
   </div>
@@ -1065,6 +1126,24 @@
 
   .mt-4 {
     margin-top: 2rem !important;
+  }
+
+  /* Aria qualitative video container */
+  .video-container-aria {
+    position: relative;
+    width: 100%;
+    padding-top: 20%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .video-container-aria video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 </style>
 
